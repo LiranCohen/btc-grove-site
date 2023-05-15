@@ -1,0 +1,47 @@
+.landing-page {
+    max-width: 800px;
+}
+
+.membership {
+  &__title {
+      // styles for the membership title
+  }
+
+  &__tier {
+      &-title {
+          // styles for the tier title
+      }
+
+      &-desc {
+          // styles for the tier description
+      }
+  }
+}
+
+.donation {
+  &__title {
+      // styles for the donation title
+  }
+
+  &__desc {
+      // styles for the donation description
+  }
+
+  &__button {
+      // styles for the donation button
+  }
+}
+
+.join {
+  &__title {
+      // styles for the join title
+  }
+
+  &__desc {
+      // styles for the join description
+  }
+
+  &__button {
+      // styles for the join button
+  }
+}

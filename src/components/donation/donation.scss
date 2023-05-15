@@ -1,0 +1,12 @@
+.donation {
+  &__lnurl {
+    svg {
+      border-radius: 25px;
+      padding: 25px;
+      background-color: #7cc4c0;
+      image {
+        background-color: black;
+      }
+    }
+  }
+}
