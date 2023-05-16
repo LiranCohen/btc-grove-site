@@ -42,7 +42,7 @@ const Donation: React.FC<Props> = ({className}) => {
         height={250}
         value={lnUrl}
         imageSettings={{
-          src: '/images/bitcoingrovelogo.png',
+          src: '/images/bitcoingrovelogo_round.png',
           height: 30,
           width: 30,
           excavate: true,

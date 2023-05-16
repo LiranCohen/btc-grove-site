@@ -1,12 +1,19 @@
 .page-header {
   &__logo {
-    max-width: 500px;
+    text-align: center;
+    img {
+      max-width: 300px;
+    }
   }
   &__title {
+    margin-top: 0px;
+    color: #ed7e36;
+    text-align: center;
       // styles for the title
   }
 
   &__subtitle {
+    color: #ed7e36;
       // styles for the subtitle
   }
 
