@@ -6,18 +6,53 @@ interface Props {
 }
 
 interface MembershipTierProps {
+  title: string,
   description: string;
   bullets: string[];
   price: number;
+  images?: string[];
 }
+
+const membershipTiers: MembershipTierProps[] = [
+    {
+      title: "Resident",
+      description:
+        "As a Resident Member, you'll enjoy full access to our hackerspace, including exclusive events, workshops, and networking opportunities. You'll also have the chance to collaborate with like-minded individuals and industry leaders.",
+      bullets: [
+        "Unlimited 24/7 access to the Grove",
+        "Basic legal, accounting, and graphic design services from Grove Partners",
+        "The ability to book the conference room and studio at the Grove",
+        "Priority access and discounted rates to Grove events",
+        "Exclusive Grove branded merchandise",
+        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative",
+      ],
+      price: 300,
+      images: ["/images/ironside_1.jpeg", "/images/ironside_2.jpeg"],
+    },
+    {
+      title: "Nomad",
+      description:
+        "Perfect for those who need a flexible arrangement, our Nomad membership offers access to our hackerspace on a per-visit basis. You'll still enjoy the benefits of our community, events, and workshops, but with the flexibility to come and go as you please.",
+      bullets: [
+        "24/7 access to the Grove for 7 days per month",
+        "The ability to book the conference room and studio at the Grove",
+        "Priority access and discounted rates to Grove events",
+        "Exclusive Grove branded merchandise",
+        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative"
+      ],
+      price: 180,
+      images: ["/images/ironside_3.jpeg", "/images/ironside_4.jpeg"],
+    },
+  ];
 
 const MembershipTier: React.FC<MembershipTierProps> = ({
   description,
   bullets,
   price,
+  images = [],
 }) => {
   return (
-    <div className="membership-tier-ctn">
+    <div className="membership-tier__ctn">
       <div className="membership-tier">
         <p className="membership-tier__description">{description}</p>
         <div className="membership-tier__price-panel">
@@ -36,42 +71,14 @@ const MembershipTier: React.FC<MembershipTierProps> = ({
           ))}
         </ol>
       </div>
+      <div className="membership-tier__image">
+        {images.map( image => <img key={image} src={image} alt={description} /> )}
+      </div>
     </div>
   );
 };
 
 const Membership: React.FC<Props> = ({ className }) => {
-
-  let membershipTiers: any[] = [
-    {
-      title: "Resident",
-      description:
-        "As a Resident Member, you'll enjoy full access to our hackerspace, including exclusive events, workshops, and networking opportunities. You'll also have the chance to collaborate with like-minded individuals and industry leaders.",
-      bullets: [
-        "Unlimited 24/7 access to the Grove",
-        "Basic legal, accounting, and graphic design services from Grove Partners",
-        "The ability to book the conference room and studio at the Grove",
-        "Priority access and discounted rates to Grove events",
-        "Exclusive Grove branded merchandise",
-        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative",
-      ],
-      price: 300,
-    },
-    {
-      title: "Nomad",
-      description:
-        "Perfect for those who need a flexible arrangement, our Nomad membership offers access to our hackerspace on a per-visit basis. You'll still enjoy the benefits of our community, events, and workshops, but with the flexibility to come and go as you please.",
-      bullets: [
-        "24/7 access to the Grove for 7 days per month",
-        "The ability to book the conference room and studio at the Grove",
-        "Priority access and discounted rates to Grove events",
-        "Exclusive Grove branded merchandise",
-        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative"
-      ],
-      price: 180,
-    },
-  ];
-
   let [selectedTier, setSelectedTier] = useState(0);
 
   return (
