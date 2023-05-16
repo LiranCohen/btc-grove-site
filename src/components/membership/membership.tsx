@@ -37,10 +37,12 @@ const Membership: React.FC<Props> = ({ className }) => {
                     title="Resident"
                     description="As a Resident Member, you'll enjoy full access to our hackerspace, including exclusive events, workshops, and networking opportunities. You'll also have the chance to collaborate with like-minded individuals and industry leaders."
                     bullets={[
-                        "Full access to the hackerspace",
-                        "Invitations to exclusive events and workshops",
-                        "Networking opportunities with Bitcoin enthusiasts and experts",
-                        "Collaborative environment to work on Bitcoin project",
+                        "Unlimited 24/7 access to the Grove",
+                        "Basic legal, accounting, and graphic design services from Grove Partners",
+                        "The ability to book the conference room and studio at the Grove",
+                        "Priority access and discounted rates to Grove events",
+                        "Exclusive Grove branded merchandise",
+                        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative",
                     ]}
                     price={300}
                 />
@@ -48,10 +50,11 @@ const Membership: React.FC<Props> = ({ className }) => {
                     title="Nomad"
                     description="Perfect for those who need a flexible arrangement, our Nomad membership offers access to our hackerspace on a per-visit basis. You'll still enjoy the benefits of our community, events, and workshops, but with the flexibility to come and go as you please."
                     bullets={[
-                        "Pay-per-visit access to the hackerspace",
-                        "Access to community events and workshops",
-                        "Networking opportunities with Bitcoin enthusiasts and experts",
-                        "Flexibility to suit your schedule",
+                        "24/7 access to the Grove for 7 days per month",
+                        "The ability to book the conference room and studio at the Grove",
+                        "Priority access and discounted rates to Grove events",
+                        "Exclusive Grove branded merchandise",
+                        "The warm fuzzy feeling of supporting a grassroots bitcoin initiative"
                     ]}
                     price={180}
                 />
